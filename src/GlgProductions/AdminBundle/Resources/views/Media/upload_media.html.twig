@@ -1,0 +1,28 @@
+{% extends "ThemeBundle:Template:admin/Layout.html.twig" %}
+{% block contents %}
+<div id="content">
+	<div class="outer">
+		<div class="inner bg-light lter" id="grid">
+			
+		</div>	
+	</div>
+</div>
+
+{% endblock %}
+
+{% block customscripts %}
+<script src="{{ asset("/frontend/vendor/dropzone/dist/dropzone.js") }}"></script>
+<script>
+	var $grid = $('.grid').imagesLoaded( function() {
+	  $grid.masonry({
+	    itemSelector: '.grid-item',
+	    percentPosition: true,
+	    columnWidth: '.grid-sizer'
+	  }); 
+	});
+</script>
+{% endblock %}
+
+{% block customcss %}
+<link rel="stylesheet" type="text/css" href="{{ asset("/frontend/vendor/dropzone/dist/basic.css") }}" />
+{% endblock %}

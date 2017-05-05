@@ -1,0 +1,15 @@
+{% block stylesheets %}
+	{% stylesheets 
+		output="assets/compressed/admin/glgcms.css"
+		filter="cssrewrite"
+		"frontend/font-awesome/css/font-awesome.min.css"
+		"frontend/bootstrap/dist/css/bootstrap.css"
+		"frontend/metis/main.css"
+		"frontend/GlgSolutions/css/extender.css"
+		"frontend/metisMenu/dist/metisMenu.css"
+		"frontend/onoffcanvas/dist/onoffcanvas.css"
+		"frontend/animate/animate.css"
+	%}
+	<link href="{{ asset_url }}" rel="stylesheet" type="text/css" />
+	{% endstylesheets %}
+{% endblock %}

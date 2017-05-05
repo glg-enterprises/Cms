@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="{{ app.request.locale }}">
+    <head>
+    	{% include 'ThemeBundle:Template:Core/_meta.html.twig' %}
+        <title>{{site_title}}</title>
+        {% include 'ThemeBundle:Template:Core/_css_core.html.twig' %}
+        {% include 'ThemeBundle:Template:admin/_css.html.twig' %}
+        {% include 'ThemeBundle:Template:Core/_favicon.html.twig' %}
+        {% include 'ThemeBundle:Template:Core/_SEO.html.twig' %}
+    </head>
+<body class="menu-affix">
+	<div class="bg-dark dk" id="wrap">
+		{% include 'ThemeBundle:Template:admin/_navbar.html.twig' %}
+		{% include 'ThemeBundle:Template:admin/_sidebar.html.twig' %}
+		{% include 'ThemeBundle:Template:admin/_content.html.twig' %}
+	</div>
+	
+	{% include 'ThemeBundle:Template:admin/_footer.html.twig' %}
+	{% include 'ThemeBundle:Template:Core/_js_global.html.twig' %}
+	{% include 'ThemeBundle:Template:admin/_js_includes.html.twig' %}
+</body>
+</html>

@@ -1,0 +1,12 @@
+{% block javascripts %}
+	{% javascripts 
+		output="assets/compressed/admin/glgcms.js"
+		"frontend/metisMenu/dist/metisMenu.js"
+		"frontend/onoffcanvas/dist/onoffcanvas.js"
+		"frontend/screenfull/screenfull.js"
+		"frontend/metis/core.js"
+	%}
+	<script src="{{ asset_url }}" type="text/javascript"></script>
+	{% endjavascripts %}
+	<script src="//cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script>
+{% endblock %}

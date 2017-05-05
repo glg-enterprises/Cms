@@ -1,0 +1,10 @@
+{% block coreStylesheets %}
+	{% stylesheets
+		filter="cssrewrite"
+		output="assets/compressed/core.css"
+		"frontend/font-awesome/css/font-awesome.min.css"
+		"frontend/bootstrap/dist/css/bootstrap.css"
+	%}	
+	<link href="{{ asset_url }}" rel="stylesheet" type="text/css" />
+	{% endstylesheets %}
+{% endblock %}

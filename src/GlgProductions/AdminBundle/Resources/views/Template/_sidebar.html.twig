@@ -1,0 +1,126 @@
+{% block sidebar %}
+<div id="left">
+	<ul id="menu" class="bg-blue dker">
+		<li class="active">
+			<a href="javascript:;" aria-expanded="true">
+				<i class="fa fa-dashboard"></i>
+				<span class="link-title"> Dashboard</span>
+				<span class="fa arrow"></span>
+			</a>
+			<ul class="collapse" aria-expanded="true">
+				<li><a href="{{ path("admin_dashboard") }}"> Menu</a></li>
+				<li><a href="">Updates <span class="label label-error"></span></a></li>
+			</ul>
+		</li>
+		<li>
+			<a href="">
+				<i class="fa fa-thumb-tack fa-rotate-45"></i>
+				<span class="link-title"> Berichten</span>
+				<span class="fa arrow"></span>
+			</a>
+			<ul class="collapse">
+				<li><a href="">Alle berichten</a></li>
+				<li><a href="">Nieuw bericht</a></li>
+				<li><a href="">Categorieën</a></li>
+				<li><a href="">Tags</a></li>
+			</ul>
+		</li>
+		<li>
+			<a href="">
+				<i class="fa fa-photo"></i>
+				<span class="link-title"> Media</span>
+				<span class="fa arrow"></span>
+			</a>
+			<ul class="collapse">
+				<li><a href="">Bibliotheek</a></li>
+				<li><a href="">Nieuw bestand</a></li>
+			</ul>
+		</li>
+		<li>
+			<a href="">
+				<i class="fa fa-clone"></i>
+				<span class="link-title"> Pagina's</span>
+				<span class="fa arrow"></span>
+			</a>
+			<ul class="collapse">
+				<li><a href="">Alle pagina's</a></li>
+				<li><a href="">Nieuwe pagina</a></li>
+			</ul>
+		</li>
+		<li>
+			<a href="">
+				<i class="fa fa-comment"></i>
+				<span class="link-title"> Reacties</span>
+			</a>
+
+		</li>
+		<li>
+			<a href="">
+				<i class="fa fa-paint-brush"></i>
+				<span class="link-title"> Weergave</span>
+				<span class="fa arrow"></span>
+			</a>
+			<ul class="collapse">
+				<li><a href="">Thema's</a></li>
+				<li><a href="">Customizer</a></li>
+				<li><a href="">Widgets</a></li>
+				<li><a href="">Menu's</a></li>
+				<li><a href="">Header</a></li>
+				<li><a href="">Editor</a></li>
+			</ul>
+		</li>
+		<li>
+			<a href="">
+				<i class="fa fa-plug"></i>
+				<span class="link-title"> Plugins</span>
+				<span class="fa arrow"></span>
+			</a>
+			<ul class="collapse">
+				<li><a href="">Geïnstalleerde plugins</a></li>
+				<li><a href="">Nieuwe plugin</a></li>
+				<li><a href="">Editor</a></li>
+			</ul>
+		</li>
+		<li>
+			<a href="">
+				<i class="fa fa-user"></i>
+				<span class="link-title"> Gebruikers</span>
+				<span class="fa arrow"></span>
+			</a>
+			<ul class="collapse">
+				<li><a href="">Alle gebruikers</a></li>
+				<li><a href="">Nieuwe toevoegen</a></li>
+				<li><a href="">Je profiel</a></li>
+			</ul>
+		</li>
+		<li>
+			<a href="">
+				<i class="fa fa-wrench"></i>
+				<span class="link-title"> Extra</span>
+				<span class="fa arrow"></span>
+			</a>
+			<ul class="collapse">
+				<li><a href="">Beschikbare middelen</a></li>
+				<li><a href="">Importeren</a></li>
+				<li><a href="">Exporteren</a></li>
+				<li><a href="">Netwerk instellen</a></li>
+			</ul>
+		</li>
+		<li>
+			<a href="">
+				<i class="fa fa-sliders fa-rotate-90"></i>
+				<span class="link-title"> Instellingen</span>
+				<span class="fa arrow"></span>
+			</a>
+			<ul class="collapse">
+				<li><a href="">Algemeen</a></li>
+				<li><a href="">Schrijven</a></li>
+				<li><a href="">Lezen</a></li>
+				<li><a href="">Reacties</a></li>
+				<li><a href="">Media</a></li>
+				<li><a href="">Permalinks</a></li>
+			</ul>
+		</li>
+	</ul>
+</div>		
+{% endblock %}

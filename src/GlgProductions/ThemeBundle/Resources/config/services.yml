@@ -1,0 +1,4 @@
+services:
+  theme:
+    class: GlgProductions\ThemeBundle\Services\Theme
+    arguments: ["@doctrine.orm.entity_manager"]

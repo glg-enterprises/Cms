@@ -1,0 +1,24 @@
+{% extends "ThemeBundle:Template:admin/Layout.html.twig" %}
+{% block contents %}
+<div id="content">
+	<div class="outer">
+		<div class="inner bg-light lter">
+			<form action="{{ path("mediaUpload") }}" class="dropzone" enctype="multipart/form-data"></form>
+		</div>	
+	</div>
+</div>
+
+{% endblock %}
+
+{% block customscripts %}
+<script src="{{ asset("/frontend/vendor/dropzone/dist/dropzone.js") }}"></script>
+<script>
+	jQuery(".dropzone").on("success", function(data){
+		console.log(data);
+	}).on("error", function(data){conole.log(data)});
+</script>
+{% endblock %}
+
+{% block customcss %}
+<link rel="stylesheet" type="text/css" href="{{ asset("/frontend/vendor/dropzone/dist/dropzone.css") }}" />
+{% endblock %}

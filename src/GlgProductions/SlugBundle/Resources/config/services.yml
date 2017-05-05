@@ -1,0 +1,4 @@
+services:
+#    slug.example:
+#        class: GlgProductions\SlugBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]

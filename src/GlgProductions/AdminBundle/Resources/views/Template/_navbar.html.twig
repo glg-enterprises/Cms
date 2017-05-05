@@ -1,0 +1,78 @@
+{% block _navbar %}
+<div id="top">
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container-fluid">
+			<header class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+                </button>
+                <a href="{{ path('admin_dashboard') }}" class="navbar-brand"><img src="{{ asset("/favicon/favicon-32x32-alt.png") }}" height="50" /></a>
+			</header>
+
+			<div class="topnav">
+				<div class="btn-group">
+					<a id="toggleFullScreen" data-placement="bottom" data-original-title="Fullscreen" data-toggle="tooltip" class="btn btn-default btn-sm">
+					<i class="glyphicon glyphicon-fullscreen"></i></a>
+				</div>
+				<div class="btn-group">
+					<a class="btn btn-default btn-sm" data-placement="bottom" data-original-title="Notifications" data-toggle="tooltip">
+						<i class="fa-envelope fa"></i>
+						<span class="label label-warning">5</span>
+					</a>
+					<a class="btn btn-default btn-sm" data-placement="bottom" data-original-title="Messages" data-toggle="tooltip">
+						<i class="fa-comments fa"></i>
+						<span class="label label-danger">5</span>
+					</a>
+					<a class="btn btn-default btn-sm" data-toggle="modal" data-original-title="Help" data-placement="bottom" href="#helpmodal">
+						<i class="fa-question fa"></i>
+					</a>
+				</div>
+				<div class="btn-group">
+					<a data-placement="bottom" data-original-title="Show / Hide Left" data-toggle="tooltip"
+					class="btn btn-primary btn-sm toggle-left" id="menu-toggle">
+						<i class="fa fa-bars"></i>
+					</a>
+					<a href="#right" data-toggle="onoffcanvas" class="btn btn-default btn-sm" aria-expanded="false">
+						<span class="fa fa-fw fa-comment"></span>
+					</a>
+				</div>
+				<div class="btn-group">
+					<a href="{{ path("admin_logout") }}" data-toggle="tooltip" data-original-title="Logout" data-placement="bottom" class="btn btn-metis-1 btn-sm">
+						<i class="fa-power-off fa"></i>
+					</a>
+				</div>
+			</div>
+			<div class="navbar-ex1-collapse collapse navbar-collapse">
+				<ul class="navbar-nav nav">
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-home"></i> {{ site_title|title }} <b class="caret"></b></a>
+						<ul class="dropdown-menu">
+						<li><a href="{{ path("homepage") }}">Site Bekijken</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<header class="head">
+		<div class="search-bar">
+			<form class="main-search">
+				<div class="input-group">
+					<input class="form-control" type="text" placeholder="Search..." />
+					<span class="input-group-btn">
+					<button class="btn-primary btn btn-sm text-muted" type="submit">
+						<i class="fa-search fa"></i>
+					</button>
+					</span>
+				</div>
+			</form>
+		</div>
+		<div class="main-bar">
+			<h3><i class="fa-home fa"></i> Dasboard</h3>
+		</div>
+	</header>
+</div>
+{% endblock %}

@@ -1,0 +1,13 @@
+{% block stylesheets %}
+	{% stylesheets 
+		output="assets/compressed/admin/glgcms.css"
+		filter="cssrewrite"
+		"frontend/metis/main.css"
+		"frontend/GlgSolutions/css/extender.css"
+		"frontend/metisMenu/dist/metisMenu.css"
+		"frontend/onoffcanvas/dist/onoffcanvas.css"
+		"frontend/animate/animate.css"
+	%}
+	<link href="{{ asset_url }}" rel="stylesheet" type="text/css" />
+	{% endstylesheets %}
+{% endblock %}

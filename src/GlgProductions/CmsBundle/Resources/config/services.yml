@@ -1,0 +1,7 @@
+services:
+#    cms.example:
+#        class: GlgProductions\CmsBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]
+  cms:
+    class: GlgProductions\CmsBundle\Services\Cms
+    arguments: ["@doctrine.orm.entity_manager"]

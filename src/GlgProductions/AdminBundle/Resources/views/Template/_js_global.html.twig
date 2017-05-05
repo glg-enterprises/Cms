@@ -1,0 +1,9 @@
+{% block javascripts %}
+	{% javascripts 
+		output="assets/compressed/glgcms.js"
+		"frontend/jquery/dist/jquery.js"
+		"frontend/bootstrap/dist/js/bootstrap.js"
+	%}
+	<script src="{{ asset_url }}" type="text/javascript"></script>
+	{% endjavascripts %}
+{% endblock %}

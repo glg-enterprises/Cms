@@ -1,0 +1,79 @@
+{% trans_default_domain "auth" %}
+<!DOCTYPE html>
+<html lang="{{ app.request.locale }}">
+	<head>
+		{% include "ThemeBundle:Template:Core/_meta.html.twig" %}
+
+		<title>GLGCMS Login</title>
+		{% include "ThemeBundle:Template:Core/_favicon.html.twig" %}
+		{% include "ThemeBundle:Template:Core/_css_core.html.twig" %}
+		{% stylesheets 
+			filter="cssrewrite"
+			output="assets/compressed/login.css"
+			"frontend/metis/main.css"
+			"frontend/metisMenu/dist/metisMenu.css"
+			"frontend/onoffcanvas/dist/onoffcanvas.css"
+			"frontend/animate/animate.css"
+		%}
+		<link href="{{ asset_url }}" rel="stylesheet" type="text/css" />
+		{% endstylesheets %}
+	</head>
+	<body class="login">
+		<div class="form-signin">
+			<div class="text-center">
+				<h3 class="text-muted">Glg CMS</h3>
+			</div>
+			<hr>
+			<div class="tab-content">
+				<div id="login" class="tab-pane active">
+					<form method="post" action="{{ path("admin_login_check") }}">
+						<p class="text-muted text-center">
+							{% trans %}loginTop{% endtrans %}
+						</p>
+						<input class="form-control top" name="_username" placeholder="{% trans %}username{% endtrans %}" type="text" value="{{ username}}" />
+						<input class="form-control bottom" name="_password" placeholder="{% trans %}password{% endtrans %}" type="password" />
+						<div class="checkbox">
+							<label>
+								<input type="checkbox"> {% trans %}rememberMe{% endtrans %}</label>
+							</label>
+						</div>
+						{% if error %}
+						<p class="bg-danger text-center text-info">{{ error.messageKey|trans(error.messageData, 'security') }}</p>
+						{% endif %}
+						<button class="btn btn-lg btn-primary btn-block" type="submit">{% trans %}login{% endtrans %}</button>
+						<input type="hidden" name="_target_path" value="admin_dashboard" />
+					</form>
+				</div>
+				<div class="tab-pane" id="forgot">
+					<form method="post">
+						<p class="text-muted text-center">Enter your e-mail</p>
+						<input type="email" name="email" placeholder="mail@mydomain.com" class="form-control" />
+						<br>
+						<button class="btn btn-lg btn-block btn-danger" type="submit">Recover Password</button>
+					</form>
+				</div>
+			</div>
+			<hr>
+			<div class="text-center">
+				<ul class="list-inline">
+					<li><a class="text-muted active" href="#login" data-toggle="tab">{% trans %}lgn{% endtrans %}</a></li>
+					<li><a href="#forgot" class="text-muted active" data-toggle="tab">{% trans %}passwd{% endtrans %}</a></li>
+				</ul>
+			</div>
+		</div>
+
+		{% include 'ThemeBundle:Template:Core/_js_global.html.twig' %}
+		<script type="text/javascript">
+			jQuery(document).ready(function(){
+				jQuery(".list-inline li > a").on("click", function(){
+					var activeForm = jQuery(this).attr('href') + ' > form';
+					jQuery(activeForm).addClass("animated fadeIn");
+
+					setTimeout(function(){
+						jQuery(activeForm).removeClass("animated fadeIn")
+					}, 1000);
+				});
+			});
+		</script>
+	</body>
+</html>

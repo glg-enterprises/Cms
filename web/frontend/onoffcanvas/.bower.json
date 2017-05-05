@@ -1,0 +1,36 @@
+{
+  "name": "onoffcanvas",
+  "description": "A jQuery offcanvas plugin",
+  "main": [
+    "dist/onoffcanvas.js",
+    "dist/onoffcanvas.css"
+  ],
+  "authors": [
+    "onokumus <onokumus@gmail.com> (https://github.com/onokumus)"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "offcanvas",
+    "plugin",
+    "jquery"
+  ],
+  "homepage": "https://github.com/onokumus/onoffcanvas",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "version": "1.1.2",
+  "_release": "1.1.2",
+  "_resolution": {
+    "type": "version",
+    "tag": "v1.1.2",
+    "commit": "f85a29e56cfec433414cae53de986c212364aa3b"
+  },
+  "_source": "https://github.com/onokumus/onoffcanvas.git",
+  "_target": "^1.1.2",
+  "_originalSource": "onoffcanvas",
+  "_direct": true
+}

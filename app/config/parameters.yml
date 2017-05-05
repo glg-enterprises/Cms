@@ -1,0 +1,12 @@
+# This file is auto-generated during the composer install
+parameters:
+    database_host: 127.0.0.1
+    database_port: null
+    database_name: crm
+    database_user: glgtests
+    database_password: Jqi5g*04
+    mailer_transport: smtp
+    mailer_host: 127.0.0.1
+    mailer_user: null
+    mailer_password: null
+    secret: 3e83c29b1d0ab26138a5fab478346b885dd0705f
